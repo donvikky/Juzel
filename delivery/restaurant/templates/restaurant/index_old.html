@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head
+        content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="#">
+    <title>Juzel Foods</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/animsition.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/animate.css' %}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+
+<body class="home">
+    <div class="site-wrapper animsition" data-animsition-in="fade-in" data-animsition-out="fade-out">
+        <!--header starts-->
+        <header id="header" class="header-scroll top-header headrom">
+            <!-- .navbar -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a href="index.html"><img class="rounded" src="{% static 'images/logo.svg' %}" alt="Juzel Logo"> </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Order</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Cart</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- /.navbar -->
+        </header>
+        <!-- banner part starts -->
+        <section class="hero bg-image" data-image-src="{% static 'images/hero.jpg' %}">
+            <div class="hero-inner">
+                <div class="container text-center hero-text font-white">
+                    <h1>Order Delivery &amp; Take-Out </h1>
+                    <h5 class="font-white space-xs">Order your meals, snacks, drinks e.t.c from us</h5>
+
+
+                </div>
+            </div>
+            <!--end:Hero inner -->
+        </section>
+
+        <div class="location-match text-xs-center">
+            <div class="container">
+                <span class="primary-color">23 Restaurants</span>
+                <span> to Order From:
+                </span>
+            </div>
+        </div>
+
+        <!-- Featured restaurants starts -->
+        <section class="featured-restaurants">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="title-block float-left">
+                            <h4>Restaurants to Order From</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <!-- restaurants filter nav starts -->
+                        <div class="restaurants-filter float-right">
+                            <nav class="primary float-left">
+                                <ul>
+                                    <li>
+                                        <a href="#" class="selected" data-filter="*">Grill</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-filter=".pizza">Pizza</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-filter=".pasta">Pasta</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-filter=".thaifood">thai food</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-filter=".fish">fish</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- restaurants filter nav ends -->
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-6 single-restaurant grill fish thaifood pizza">
+                        <a href="menu.html">
+                            <div class="restaurant-wrap">
+                                <div class="row">
+                                    <div class="col-12 col-sm-3 col-md-12 col-lg-3 text-xs-center">
+                                        <img src="{% static 'images/kfc-logo.jpg' %}" class="restaurant-logo" alt="Restaurant logo">
+                                    </div>
+                                    <div class="col-12 col-sm-9 col-md-9 col-lg-9">
+                                        <h5>Kano Fried Chicken</h5>
+                                        <span class="food-available">Burgers, American, Sandwiches, Fast Food, BBQ</span>
+                                        <div class="bottom-part">
+                                            <div class="mins">
+                                                <i class="fa fa-motorcycle"></i> 4-6 Independence Road, Kano State, Nigeria</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6 single-restaurant grill fish thaifood pizza">
+                        <a href="menu.html">
+                            <div class="restaurant-wrap">
+                                <div class="row">
+                                    <div class="col-12 col-sm-3 col-md-12 col-lg-3 text-xs-center">
+                                        <img src="images/kfc-logo.jpg" class="restaurant-logo" alt="Restaurant logo">
+                                    </div>
+                                    <div class="col-12 col-sm-9 col-md-9 col-lg-9">
+                                        <h5>Kano Fried Chicken</h5>
+                                        <span class="food-available">Burgers, American, Sandwiches, Fast Food, BBQ</span>
+                                        <div class="bottom-part">
+                                            <div class="mins">
+                                                <i class="fa fa-motorcycle"></i> 4-6 Independence Road, Kano State, Nigeria</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6 single-restaurant grill fish thaifood pizza">
+                        <a href="menu.html">
+                            <div class="restaurant-wrap">
+                                <div class="row">
+                                    <div class="col-12 col-sm-3 col-md-12 col-lg-3 text-xs-center">
+                                        <img src="images/kfc-logo.jpg" class="restaurant-logo" alt="Restaurant logo">
+                                    </div>
+                                    <div class="col-12 col-sm-9 col-md-9 col-lg-9">
+                                        <h5>Kano Fried Chicken</h5>
+                                        <span class="food-available">Burgers, American, Sandwiches, Fast Food, BBQ</span>
+                                        <div class="bottom-part">
+                                            <div class="mins">
+                                                <i class="fa fa-motorcycle"></i> 4-6 Independence Road, Kano State, Nigeria</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6 single-restaurant grill fish thaifood pizza">
+                        <a href="menu.html">
+                            <div class="restaurant-wrap">
+                                <div class="row">
+                                    <div class="col-12 col-sm-3 col-md-12 col-lg-3 text-xs-center">
+                                        <img src="images/kfc-logo.jpg" class="restaurant-logo" alt="Restaurant logo">
+                                    </div>
+                                    <div class="col-12 col-sm-9 col-md-9 col-lg-9">
+                                        <h5>Kano Fried Chicken</h5>
+                                        <span class="food-available">Burgers, American, Sandwiches, Fast Food, BBQ</span>
+                                        <div class="bottom-part">
+                                            <div class="mins">
+                                                <i class="fa fa-motorcycle"></i> 4-6 Independence Road, Kano State, Nigeria</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6 single-restaurant grill fish thaifood pizza">
+                        <a href="menu.html">
+                            <div class="restaurant-wrap">
+                                <div class="row">
+                                    <div class="col-12 col-sm-3 col-md-12 col-lg-3 text-xs-center">
+                                        <img src="images/kfc-logo.jpg" class="restaurant-logo" alt="Restaurant logo">
+                                    </div>
+                                    <div class="col-12 col-sm-9 col-md-9 col-lg-9">
+                                        <h5>Kano Fried Chicken</h5>
+                                        <span class="food-available">Burgers, American, Sandwiches, Fast Food, BBQ</span>
+                                        <div class="bottom-part">
+                                            <div class="mins">
+                                                <i class="fa fa-motorcycle"></i> 4-6 Independence Road, Kano State, Nigeria</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6 single-restaurant grill fish thaifood pizza">
+                        <a href="menu.html">
+                            <div class="restaurant-wrap">
+                                <div class="row">
+                                    <div class="col-12 col-sm-3 col-md-12 col-lg-3 text-xs-center">
+                                        <img src="images/kfc-logo.jpg" class="restaurant-logo" alt="Restaurant logo">
+                                    </div>
+                                    <div class="col-12 col-sm-9 col-md-9 col-lg-9">
+                                        <h5>Kano Fried Chicken</h5>
+                                        <span class="food-available">Burgers, American, Sandwiches, Fast Food, BBQ</span>
+                                        <div class="bottom-part">
+                                            <div class="mins">
+                                                <i class="fa fa-motorcycle"></i> 4-6 Independence Road, Kano State, Nigeria</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <section class="add-restaurants">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-3 add-title">
+                            <h4>Add Your Restaurant</h4>
+                        </div>
+                        <div class="col-12 col-md-5 join-text">
+                            <p>Join our growing list of restaurants
+                                <br>
+                                <a href="#">
+                                    <strong>on Juzel Foods</strong>
+                                </a>
+                            </p>
+                        </div>
+                        <div class="col-12 col-md-4 join-btn text-xs-right">
+                            <a href="#" class="btn theme-btn btn-lg">Join Now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- add restaurant ends -->
+    </div>
+    </section>
+    <!-- Featured restaurants ends -->
+
+    <section class="popular">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="title-block float-left">
+                        <h2>Top Meals</h2>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <!-- restaurants filter nav starts -->
+                    <div class="restaurants-filter text-right">
+                        <nav class="primary">
+                            <ul>
+                                <li>
+                                    <a href="#" class="selected" data-filter="*">Grill</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-filter=".pizza">Pizza</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-filter=".pasta">Pasta</a>
+                                </li>
+                                <li>
+                                    <a href="#" data-filter=".fish">Fish</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- restaurants filter nav ends -->
+                </div>
+            </div>
+            <div class="row">
+                <!-- Each popular food item starts -->
+                <div class="col-12 col-md-6 col-lg-4 food-item">
+                    <div class="food-item-wrap">
+                        <div class="figure-wrap bg-image" data-image-src="{% static 'images/chicken.jpg' %}">
+                        </div>
+                        <div class="content">
+                            <h5>
+                                <a href="menu.html">Fried Rice & Chicken </a>
+                            </h5>
+                            <div class="product-name">Fried Chicken with cheese</div>
+                            <div class="price-btn-block">
+                                <span class="price">N1,500</span>
+                                <a href="#" class="btn theme-btn-outline float-right">Order Now</a>
+                            </div>
+                        </div>
+                        <div class="restaurant-block">
+                            <div class="left">
+                                <a class="float-left" href="menu.html">
+                                    <img src="{% static 'images/kfc-logo.jpg' %}" alt="Restaurant logo"> </a>
+                                <div class="float-left right-text">
+                                    <a href="#">Kano Fried Chicken</a>
+                                    <span>4-6 Independence Road</span>
+                                </div>
+                            </div>
+                            <div class="right-like-part float-right">
+                                <a href="#">
+                                    <i class="fa fa-heart-o"></i>
+                                    <span>48</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 food-item">
+                    <div class="food-item-wrap">
+                        <div class="figure-wrap bg-image" data-image-src="images/chicken.jpg">
+                            <div class="distance">
+                                <i class="fa fa-pin"></i>1240m</div>
+
+                        </div>
+                        <div class="content">
+                            <h5>
+                                <a href="menu.html">Fried Rice & Chicken </a>
+                            </h5>
+                            <div class="product-name">Fried Chicken with cheese</div>
+                            <div class="price-btn-block">
+                                <span class="price">N1,500</span>
+                                <a href="#" class="btn theme-btn-outline float-right">Order Now</a>
+                            </div>
+                        </div>
+                        <div class="restaurant-block">
+                            <div class="left">
+                                <a class="float-left" href="menu.html">
+                                    <img src="images/kfc-logo.jpg" alt="Restaurant logo"> </a>
+                                <div class="float-left right-text">
+                                    <a href="#">Kano Fried Chicken</a>
+                                    <span>4-6 Independence Road</span>
+                                </div>
+                            </div>
+                            <div class="right-like-part float-right">
+                                <i class="fa fa-heart-o"></i>
+                                <span>48</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 food-item">
+                    <div class="food-item-wrap">
+                        <div class="figure-wrap bg-image" data-image-src="images/chicken.jpg">
+                        </div>
+                        <div class="content">
+                            <h5>
+                                <a href="menu.html">Fried Rice & Chicken </a>
+                            </h5>
+                            <div class="product-name">Fried Chicken with cheese</div>
+                            <div class="price-btn-block">
+                                <span class="price">N1,500</span>
+                                <a href="#" class="btn theme-btn-outline float-right">Order Now</a>
+                            </div>
+                        </div>
+                        <div class="restaurant-block">
+                            <div class="left">
+                                <a class="float-left" href="menu.html">
+                                    <img src="images/kfc-logo.jpg" alt="Restaurant logo"> </a>
+                                <div class="float-left right-text">
+                                    <a href="#">Kano Fried Chicken</a>
+                                    <span>4-6 Independence Road</span>
+                                </div>
+                            </div>
+                            <div class="right-like-part float-right">
+                                <i class="fa fa-heart-o"></i>
+                                <span>48</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 food-item">
+                    <div class="food-item-wrap">
+                        <div class="figure-wrap bg-image" data-image-src="images/chicken.jpg">
+                            <div class="distance">
+                                <i class="fa fa-pin"></i>1240m</div>
+
+                        </div>
+                        <div class="content">
+                            <h5>
+                                <a href="menu.html">Fried Rice & Chicken </a>
+                            </h5>
+                            <div class="product-name">Fried Chicken with cheese</div>
+                            <div class="price-btn-block">
+                                <span class="price">N1,500</span>
+                                <a href="#" class="btn theme-btn-outline float-right">Order Now</a>
+                            </div>
+                        </div>
+                        <div class="restaurant-block">
+                            <div class="left">
+                                <a class="float-left" href="menu.html">
+                                    <img src="images/kfc-logo.jpg" alt="Restaurant logo"> </a>
+                                <div class="float-left right-text">
+                                    <a href="#">Kano Fried Chicken</a>
+                                    <span>4-6 Independence Road</span>
+                                </div>
+                            </div>
+                            <div class="right-like-part float-right">
+                                <i class="fa fa-heart-o"></i>
+                                <span>48</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 food-item">
+                    <div class="food-item-wrap">
+                        <div class="figure-wrap bg-image" data-image-src="images/chicken.jpg">
+                            <div class="distance">
+                                <i class="fa fa-pin"></i>1240m</div>
+                        </div>
+                        <div class="content">
+                            <h5>
+                                <a href="menu.html">Fried Rice & Chicken </a>
+                            </h5>
+                            <div class="product-name">Fried Chicken with cheese</div>
+                            <div class="price-btn-block">
+                                <span class="price">N1,500</span>
+                                <a href="#" class="btn theme-btn-outline float-right">Order Now</a>
+                            </div>
+                        </div>
+                        <div class="restaurant-block">
+                            <div class="left">
+                                <a class="float-left" href="menu.html">
+                                    <img src="images/kfc-logo.jpg" alt="Restaurant logo"> </a>
+                                <div class="float-left right-text">
+                                    <a href="#">Kano Fried Chicken</a>
+                                    <span>4-6 Independence Road</span>
+                                </div>
+                            </div>
+                            <div class="right-like-part float-right">
+                                <i class="fa fa-heart-o"></i>
+                                <span>48</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 food-item">
+                    <div class="food-item-wrap">
+                        <div class="figure-wrap bg-image" data-image-src="images/chicken.jpg">
+                            <div class="distance">
+                                <i class="fa fa-pin"></i>1240m</div>
+                        </div>
+                        <div class="content">
+                            <h5>
+                                <a href="menu.html">Fried Rice & Chicken </a>
+                            </h5>
+                            <div class="product-name">Fried Chicken with cheese</div>
+                            <div class="price-btn-block">
+                                <span class="price">N1,500</span>
+                                <a href="#" class="btn theme-btn-outline float-right">Order Now</a>
+                            </div>
+                        </div>
+                        <div class="restaurant-block">
+                            <div class="left">
+                                <a class="float-left" href="menu.html">
+                                    <img src="images/kfc-logo.jpg" alt="Restaurant logo"> </a>
+                                <div class="float-left right-text">
+                                    <a href="#">Kano Fried Chicken</a>
+                                    <span>4-6 Independence Road</span>
+                                </div>
+                            </div>
+                            <div class="right-like-part float-right">
+                                <i class="fa fa-heart-o"></i>
+                                <span>48</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <!-- Popular block ends -->
+
+    <footer class="footer">
+        <div class="container">
+            <!-- top footer statrs -->
+            <div class="row top-footer">
+                <div class="col-12 col-md-4 footer-logo-block color-gray">
+                    <a href="index.html">
+                        <img src="{% static 'images/logo.svg' %}" alt="Juzel Logo"> </a>
+                    <span>Order Delivery &amp; Take-Out at Juzel Foods </span>
+                </div>
+                <div class="col-12 col-md-4 payment-options color-gray">
+                    <h5>Payment Options</h5>
+                    <ul>
+                        <li>
+                                <img src="{% static 'images/paystack.jpg' %}" alt="Paystack">
+                        </li>
+                        <li>
+                                <img src="{% static 'images/mastercard.png' %}" alt="Mastercard">
+                        </li>
+                       
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4 address color-gray">
+                    <h5>Address</h5>
+                    <p>4-6 Independence Road, Gasahsh, Kano, Nigeria
+                    </p>
+                    <h5>Phone:
+                        <a href="tel:+2347061076826">07061076826</a>
+                    </h5>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+    <script src="{% static 'js/tether.min.js' %}"></script>
+    <script src="{% static 'js/animsition.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap-slider.min.js' %}"></script>
+    <script src="{% static 'js/jquery.isotope.min.js' %}"></script>
+    <script src="{% static 'js/headroom.js' %}"></script>
+    <script src="{% static 'js/foodpicky.min.js' %}"></script>
+</body>
+
+</html>

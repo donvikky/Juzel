@@ -15,8 +15,25 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.conf.urls import include
+from django.conf import settings
+from django.conf.urls.static import static
+from django.conf.urls import include,url
+from restaurant import views
+from rest_framework.routers import DefaultRouter
+from api import views as api_views
+
+router = DefaultRouter()
+router.register(r'restaurants', api_views.RestaurantViewset)
+router.register(r'menus', api_views.MenuViewset)
 
 urlpatterns = [
+    path('', views.IndexView.as_view()),
+    url('^api/',include(router.urls)),
+    path('api-auth/', include('rest_framework.urls')),
     path('admin/', admin.site.urls),
+    path('restaurant/', include('restaurant.urls'))
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
