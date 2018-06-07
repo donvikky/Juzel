@@ -45,9 +45,6 @@ var top_meal = Vue.component('top-meal',{
     data(){
         return{
             likes:200,
-            styleObject: {
-                background: 'url("/media/chicken.jpg") center center'
-            }
         }
     }
 })
