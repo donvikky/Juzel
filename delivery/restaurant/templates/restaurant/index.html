@@ -48,7 +48,7 @@
             <div class="row">
                 {% for restaurant in restaurants  %}
                     <div class="col-12 col-md-6 col-lg-6 single-restaurant grill fish thaifood pizza">
-                        <a href="menu.html">
+                        <a href="{% url 'restaurant:menu' id=restaurant.pk %}">
                             <div class="restaurant-wrap">
                                 <div class="row">
                                     <div class="col-12 col-sm-3 col-md-12 col-lg-3 text-xs-center">

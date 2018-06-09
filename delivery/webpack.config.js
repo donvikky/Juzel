@@ -2,7 +2,8 @@ const path = require('path')
 
 module.exports = {
     entry:{
-        app: path.join(__dirname, 'src', 'app.js')
+        app: path.join(__dirname, 'src', 'app.js'),
+        menu: path.join(__dirname, 'src', 'menu.js'),
     },
     output:{
         path: path.resolve(__dirname, 'static','js'),

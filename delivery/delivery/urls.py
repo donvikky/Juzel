@@ -31,7 +31,9 @@ urlpatterns = [
     url('^api/',include(router.urls)),
     path('api-auth/', include('rest_framework.urls')),
     path('admin/', admin.site.urls),
-    path('restaurant/', include('restaurant.urls'))
+    path('restaurant/', include('restaurant.urls')),
+    path('api/menus/restaurant/<restaurant>', api_views.RestaurantMenuList().as_view()),
+    path('api/menus/restaurant/<restaurant>/categories', views.get_restaurant_food_categories),
 ]
 
 if settings.DEBUG:

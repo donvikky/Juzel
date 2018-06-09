@@ -51,7 +51,8 @@ class FoodCategory(models.Model):
 class Food(models.Model):
     name = models.CharField(max_length=250)
     description = models.TextField()
-    categories = models.ManyToManyField(FoodCategory)
+    category = models.ForeignKey(FoodCategory, related_name='category', on_delete=models.CASCADE,
+                default=None)
     # audit params
     create_time = models.DateTimeField(auto_now_add=True)
     create_user = models.ForeignKey(User,related_name='foods', on_delete=models.CASCADE)
@@ -90,6 +91,7 @@ class Restaurant(models.Model):
     latitude = models.DecimalField(blank=True, null=True,max_digits=15,decimal_places=9)
     longitude = models.DecimalField(blank=True, null=True,max_digits=15,decimal_places=9)
     categories = models.ManyToManyField(RestaurantCategory)
+    food_categories = models.ManyToManyField(FoodCategory)
     likes = models.PositiveIntegerField(default=0)
     # audit params
     create_time = models.DateTimeField(auto_now_add=True)
@@ -139,4 +141,7 @@ class Menu(models.Model):
 
     def menu_image(self):
         return str(self.image)
+
+    def food_category(self):
+        return self.food.category
 

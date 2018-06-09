@@ -30,7 +30,7 @@ class FoodAdmin(admin.ModelAdmin):
 
 class MenuAdmin(admin.ModelAdmin):
     exclude = ('create_time','create_user','update_time','update_user')
-    list_display = ['food','restaurant','price','description']
+    list_display = ['food','restaurant','food_category','price','description']
 
     def save_model(self, request, obj, form, change):
         if not change:

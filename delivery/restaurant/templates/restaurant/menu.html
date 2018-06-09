@@ -1,0 +1,114 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+{% block body %}
+    <div class="page-wrapper" id="menu-page">
+        <span id='restaurant_id'>{{restaurant.id}}</span>
+        <!-- top Links -->
+        <div class="top-links">
+            <div class="container">
+                <ul class="row steps">
+                    <li class="col-sm-4 col-md-4 col-lg-4 col-12 link-item active">
+                        <span>1</span>
+                        <a href="index.html">Choose Your Restaurant</a>
+                    </li>
+                    <li class="col-sm-4 col-md-4 col-lg-4 col-12 link-item">
+                        <span>2</span>
+                        <a href="restaurants.html">Select your favourite food(s)</a>
+                    </li>
+                    <li class="col-sm-4 col-md-4 col-lg-4 col-12 link-item">
+                        <span>3</span>
+                        <a href="checkout.html">Order and Pay online</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- end:Top links -->
+
+        <!-- start: Inner page hero -->
+        <section class="inner-page-hero bg-image" data-image-src="{% static 'images/hero.jpg' %}">
+            <div class="profile">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12  col-md-4 col-lg-4 profile-img">
+                            <div class="image-wrap">
+                                <figure>
+                                    <img src="{{restaurant.logo.url}}" alt="Profile Image">
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 profile-desc">
+                            <div class="pull-left right-text white-txt">
+                                <h6>
+                                    <a href="#">{{restaurant.name}}</a>
+                                </h6>
+                                <a class="btn btn-small btn-green">Open</a>
+                                <p>{{restaurant.categories.all | join:', '}}</p>
+                                <ul class="nav nav-inline">
+                                    <li class="nav-item">
+                                        <a href="#">
+                                            <i class="fa fa-motorcycle"></i> {{restaurant.address}} {{restaurant.town}}
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end:Inner page hero -->
+
+        <div class="breadcrumb">
+            <div class="container">
+                <ul>
+                    <li>
+                        <a href="#" class="active">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">{{restaurant.name}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container m-t-30">
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
+                    <div class="sidebar clearfix m-b-20">
+                        <div class="main-block">
+                            <div class="sidebar-title white-txt">
+                                <h6>Choose Meals</h6>
+                                <i class="fa fa-cutlery pull-right"></i>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="#headingTwo" class="scroll active">Rice</a>
+                                </li>
+                                <li>
+                                    <a href="#headingTwo" class="scroll">Swallow</a>
+                                </li>
+                                <li>
+                                    <a href="#headingTwo" class="scroll">Drinks</a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-8 col-md-8 col-lg-6">
+                    <div class="menu-widget m-b-30">
+                        <div class="menu accordion" id="menuAccordion">
+                            <category-item v-if="categories.length" v-bind:key="category.id" v-for="category in categories" v-bind:category="category">
+                                <food-item v-for="food in category.foods" v-bind:key="food.id" v-bind:food="food"></food-item>
+                            </category-item>
+                        </div>
+                    </div>
+                </div>
+            </div>        
+        </div>
+
+
+    </div><!-- page wrapper end-->
+    <script src="{% static 'js/menu.bundle.js' %}"></script>
+{% endblock body %}
