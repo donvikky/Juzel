@@ -66,11 +66,10 @@ var meal_app = new Vue({
             axios.get('/api/menus/')
             .then(function(response){
                 vm.menus = response.data
-                alert('before mount: '+ this.menus.length)
             })
             .catch(function(error){
                 //alert('No menus could be loaded')
             })
-        }
+        }        
     }
 })

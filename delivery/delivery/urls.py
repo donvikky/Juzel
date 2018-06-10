@@ -33,9 +33,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('restaurant/', include('restaurant.urls')),
     path('api/menus/restaurant/<restaurant>', api_views.RestaurantMenuList().as_view()),
-    path('api/menus/restaurant/<restaurant>/categories', views.get_restaurant_food_categories),
+    path('api/menus/restaurant/<restaurant>/categories', views.get_restaurant_food_categories),    
 ]
 
-if settings.DEBUG:
+if settings.DEBUG:    
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

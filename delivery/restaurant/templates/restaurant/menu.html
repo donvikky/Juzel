@@ -2,7 +2,9 @@
 {% load staticfiles %}
 {% block body %}
     <div class="page-wrapper" id="menu-page">
-        <span id='restaurant_id'>{{restaurant.id}}</span>
+        <span id='restaurant_id' style="display:none;">{{restaurant.id}}</span>
+        <span id='token' style="display:none;">{{token}}</span>
+        <span id='csrftoken' style="display:none;">{% csrf_token %}</span>
         <!-- top Links -->
         <div class="top-links">
             <div class="container">
@@ -100,8 +102,35 @@
                     <div class="menu-widget m-b-30">
                         <div class="menu accordion" id="menuAccordion">
                             <category-item v-if="categories.length" v-bind:key="category.id" v-for="category in categories" v-bind:category="category">
-                                <food-item v-for="food in category.foods" v-bind:key="food.id" v-bind:food="food"></food-item>
+                                <food-item v-on:get-orders="getOrders" v-for="food in category.foods" v-bind:key="food.id" v-bind:food="food"></food-item>
                             </category-item>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-12 col-lg-3">
+                    <div class="sidebar-wrap">
+                        <div class="widget widget-cart">
+                            <div class="widget-heading">
+                                <h3 class="widget-title text-dark">
+                                    Your Cart Bowl
+                                </h3>
+                                <div class="clearfix"></div>
+                            </div>
+                            <!-- order rows -->
+                            <order-item v-for="order in orders" v-bind:key="order.id" v-bind:order="order" v-on:remove-item="removeItem"></order-item>
+                            <!-- order row ends -->
+                            <div class="widget-body">
+                                <div class="price-wrap text-xs-center">
+                                    <p>TOTAL</p>
+                                    <h3 class="value">
+                                        <strong v-text="grandTotal">N3,500</strong>
+                                    </h3>
+                                    <p>+ N300 Shipping Added</p>
+                                    <button onclick="location.href='checkout.html'" type="button" class="btn theme-btn w-100">Checkout</button>
+                                    <button type="button" class="btn btn-danger mt-2 w-100" @click="clearCart">Clear Cart</button>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>

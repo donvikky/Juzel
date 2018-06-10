@@ -145,3 +145,6 @@ class Menu(models.Model):
     def food_category(self):
         return self.food.category
 
+class BooleanUtility:
+    inside = False
+
